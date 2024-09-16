@@ -1,5 +1,7 @@
 # Тестовое задание на позицию «Frontend-разработчик стажер на React»
 
+[Демо](https://lalexd.github.io/Test_Users_Info_Client/)
+
 ### Выполнил 
 Ларин Александр  
 larinalexd@yandex.ru
