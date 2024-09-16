@@ -1,22 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.3cc1566b.css",
-    "main.js": "/static/js/main.ad44fde5.js",
-    "static/js/453.1d19cfd8.chunk.js": "/static/js/453.1d19cfd8.chunk.js",
-    "static/media/Roboto-Regular.woff2": "/static/media/Roboto-Regular.86a2beffef3e35f5c867.woff2",
-    "static/media/logout_icon.svg": "/static/media/logout_icon.3c6718fb9dee8dfc1c28.svg",
-    "static/media/row_down_icon.svg": "/static/media/row_down_icon.29bf9c957e5196c7174c2d1ba0fab758.svg",
-    "static/media/phone_icon.svg": "/static/media/phone_icon.604f5882b2bb04f32641e996076afc96.svg",
-    "static/media/back_icon.svg": "/static/media/back_icon.a1b9b67835230596681d.svg",
-    "index.html": "/index.html",
-    "static/media/email_icon.svg": "/static/media/email_icon.8a6b8f66f8661fb4adf466e83a38cbd4.svg",
-    "static/media/like.svg": "/static/media/like.a4ecabf5329bce8f0b09.svg",
-    "main.3cc1566b.css.map": "/static/css/main.3cc1566b.css.map",
-    "main.ad44fde5.js.map": "/static/js/main.ad44fde5.js.map",
-    "453.1d19cfd8.chunk.js.map": "/static/js/453.1d19cfd8.chunk.js.map"
+    "main.css": "/Test_Users_Info_Client/static/css/main.b6f8e374.css",
+    "main.js": "/Test_Users_Info_Client/static/js/main.775b8eab.js",
+    "static/media/Roboto-Regular.woff2": "/Test_Users_Info_Client/static/media/Roboto-Regular.86a2beffef3e35f5c867.woff2",
+    "static/media/user_icon.svg": "/Test_Users_Info_Client/static/media/user_icon.1bba9a1e4417cf6742a0.svg",
+    "static/media/logout_icon.svg": "/Test_Users_Info_Client/static/media/logout_icon.3c6718fb9dee8dfc1c28.svg",
+    "static/media/row_down_icon.svg": "/Test_Users_Info_Client/static/media/row_down_icon.29bf9c957e5196c7174c2d1ba0fab758.svg",
+    "static/media/phone_icon.svg": "/Test_Users_Info_Client/static/media/phone_icon.604f5882b2bb04f32641e996076afc96.svg",
+    "static/media/back_icon.svg": "/Test_Users_Info_Client/static/media/back_icon.a1b9b67835230596681d.svg",
+    "index.html": "/Test_Users_Info_Client/index.html",
+    "static/media/email_icon.svg": "/Test_Users_Info_Client/static/media/email_icon.8a6b8f66f8661fb4adf466e83a38cbd4.svg",
+    "main.b6f8e374.css.map": "/Test_Users_Info_Client/static/css/main.b6f8e374.css.map",
+    "main.775b8eab.js.map": "/Test_Users_Info_Client/static/js/main.775b8eab.js.map"
   },
   "entrypoints": [
-    "static/css/main.3cc1566b.css",
-    "static/js/main.ad44fde5.js"
+    "static/css/main.b6f8e374.css",
+    "static/js/main.775b8eab.js"
   ]
 }
