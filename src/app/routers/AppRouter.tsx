@@ -16,6 +16,7 @@ const ProtectedRoute = ({ redirectPath = '/login' }) => {
     return <Outlet />
 }
 
+// createBrowserRouter заменен для корректной работы Github Page
 export const AppRouter = createHashRouter([
     {
         path: "/*",

@@ -21,16 +21,14 @@ export const Header = ({ handleBack, contentStyle, children }: PropsWithChildren
     }
 
     return (
-        <div className={styles.wrapper}>
-            <div className={styles['header-wrapper']}>
-                <header className={styles.header}>
-                    <Button onClick={() => navigate("/")} className={clsx(styles.button, styles['button-back'], !handleBack && styles.hidden)}>Назад</Button>
-                    <div className={clsx(styles.content, contentStyle)}>
-                        {children}
-                    </div>
-                    <Button onClick={handleLogout} className={clsx(styles.button, styles['button-logout'], !handleLogout && styles.hidden)}>Выход</Button>
-                </header>
-            </div>
+        <div className={styles['wrapper']}>
+            <header className={styles.header}>
+                <Button onClick={() => navigate("/")} className={clsx(styles.button, styles['button-back'], !handleBack && styles.hidden)}>Назад</Button>
+                <div className={clsx(styles.content, contentStyle)}>
+                    {children}
+                </div>
+                <Button onClick={handleLogout} className={clsx(styles.button, styles['button-logout'], !handleLogout && styles.hidden)}>Выход</Button>
+            </header>
         </div>
     )
 }
