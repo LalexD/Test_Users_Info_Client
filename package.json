@@ -2,6 +2,7 @@
   "name": "test-user-info-client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lalexd.github.io/Test_Users_Info_Client",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/jest-dom": "^5.17.0",
