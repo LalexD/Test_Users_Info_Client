@@ -3,7 +3,7 @@ import { ErrorPage } from "pages/Error/ErrorPage";
 import { AuthPage } from "pages/login/AuthPage";
 import { TeamPage } from "pages/Team/TeamPage";
 import UserPage from "pages/User/UserPage";
-import { createBrowserRouter, Navigate, Outlet } from "react-router-dom";
+import { createBrowserRouter, createHashRouter, Navigate, Outlet } from "react-router-dom";
 
 const ProtectedRoute = ({ redirectPath = '/login' }) => {
     const { isAuth, isAuthInProgress } = useAppSelector(state => state.session);
@@ -16,9 +16,9 @@ const ProtectedRoute = ({ redirectPath = '/login' }) => {
     return <Outlet />
 }
 
-export const AppRouter = createBrowserRouter([
+export const AppRouter = createHashRouter([
     {
-        path: "/",
+        path: "/*",
         element: <ProtectedRoute />,
         errorElement: <ErrorPage />,
         children: [
