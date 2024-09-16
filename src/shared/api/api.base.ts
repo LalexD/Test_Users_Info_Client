@@ -34,6 +34,10 @@ async function getRequest(endPoint: string, method: 'GET' | 'POST' | 'PUT', body
     } else {
         if (response.status === 404) throw new Error('404, Not found');
         if (response.status === 500) throw new Error('500, internal server error');
+        if (response.status === 400) {
+            const data = await response.json();
+            throw new Error(`400, ${data?.error}`);
+        }
         throw new Error(response.status.toString());
     }
 }

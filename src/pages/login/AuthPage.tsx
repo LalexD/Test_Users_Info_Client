@@ -11,21 +11,33 @@ import styles from "./AuthPage.module.scss";
 
 
 export const AuthPage = () => {
-    const [errors, setErrors] = useState<TValidateFormError>({});
+    const [errorsValid, setErrorsValid] = useState<TValidateFormError>({});
     const [isLoginForm, setIsLoginForm] = useState(true);
-    const { isAuthInProgress, isAuth } = useAppSelector(store => store.session);
+    const { isAuthInProgress, isAuth, error } = useAppSelector(store => store.session);
     const dispatch = useAppDispatch();
 
     useEffect(() => {
-        const errorKey = Object.keys(errors);
+        console.log(error);
+        if (error?.message === "400, user not found") {
+            setErrorsValid({ email: "Пользователь с такой почтой не зарегистрирован" })
+        }
+        if (error?.message === "400, Note: Only defined users succeed registration") {
+            setErrorsValid({ email: "Только пользователь с почтой eve.holt@reqres.in может быть зарегистрирован" })
+        }
+    }, [error]);
+
+
+    useEffect(() => {
+        // Focus Input after error validate
+        const errorKey = Object.keys(errorsValid);
         if (errorKey.length > 0) {
             document.getElementById(errorKey[0])?.focus();
         }
-    }, [errors])
+    }, [errorsValid])
 
     const toogleForm = () => {
         setIsLoginForm(is => (!is));
-        setErrors({});
+        setErrorsValid({});
     }
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -33,10 +45,9 @@ export const AuthPage = () => {
         const formData = new FormData(event.currentTarget);
         const data = Object.fromEntries(formData.entries()) as Record<string, string>;
 
-        const newErrors = isLoginForm ? signInValidate.validate(data) : signUpValidate.validate(data);
-        setErrors(newErrors);
+        const newError = isLoginForm ? signInValidate.validate(data) : signUpValidate.validate(data);
 
-        if (Object.keys(newErrors).length === 0) {
+        if (Object.keys(newError).length === 0) {
             const authData = {
                 email: data.email,
                 password: data.password
@@ -46,6 +57,8 @@ export const AuthPage = () => {
             } else {
                 dispatch(register(authData));
             }
+        } else {
+            setErrorsValid(newError);
         }
     }
 
@@ -54,8 +67,8 @@ export const AuthPage = () => {
     return (
         <div className={styles.page}>
             {isLoginForm
-                ? <SignInForm toogleForm={toogleForm} errors={errors} isAuthInProgress={isAuthInProgress} handleSubmit={handleSubmit} />
-                : <SignUpForm toogleForm={toogleForm} errors={errors} isAuthInProgress={isAuthInProgress} handleSubmit={handleSubmit} />}
+                ? <SignInForm toogleForm={toogleForm} errors={errorsValid} isAuthInProgress={isAuthInProgress} handleSubmit={handleSubmit} />
+                : <SignUpForm toogleForm={toogleForm} errors={errorsValid} isAuthInProgress={isAuthInProgress} handleSubmit={handleSubmit} />}
         </div>
     )
 }
