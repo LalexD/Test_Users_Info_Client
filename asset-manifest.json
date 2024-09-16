@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Test_Users_Info_Client/static/css/main.b6f8e374.css",
-    "main.js": "/Test_Users_Info_Client/static/js/main.db599839.js",
+    "main.js": "/Test_Users_Info_Client/static/js/main.16b4c3ac.js",
     "static/media/Roboto-Regular.woff2": "/Test_Users_Info_Client/static/media/Roboto-Regular.86a2beffef3e35f5c867.woff2",
     "static/media/user_icon.svg": "/Test_Users_Info_Client/static/media/user_icon.1bba9a1e4417cf6742a0.svg",
     "static/media/logout_icon.svg": "/Test_Users_Info_Client/static/media/logout_icon.3c6718fb9dee8dfc1c28.svg",
@@ -11,10 +11,10 @@
     "index.html": "/Test_Users_Info_Client/index.html",
     "static/media/email_icon.svg": "/Test_Users_Info_Client/static/media/email_icon.8a6b8f66f8661fb4adf466e83a38cbd4.svg",
     "main.b6f8e374.css.map": "/Test_Users_Info_Client/static/css/main.b6f8e374.css.map",
-    "main.db599839.js.map": "/Test_Users_Info_Client/static/js/main.db599839.js.map"
+    "main.16b4c3ac.js.map": "/Test_Users_Info_Client/static/js/main.16b4c3ac.js.map"
   },
   "entrypoints": [
     "static/css/main.b6f8e374.css",
-    "static/js/main.db599839.js"
+    "static/js/main.16b4c3ac.js"
   ]
 }
