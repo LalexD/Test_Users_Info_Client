@@ -1,0 +1,66 @@
+@use 'src/shared/styles/utils' as *;
+
+.wrapper {
+    width: 100%;
+    background-color: $color-primary;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    min-height: $header-height;
+    max-width: $max-content-width;
+    width: 100%;
+    padding: 32px 30px 32px 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 20px;
+
+    @media (max-width:768px) {
+        flex-wrap: wrap;
+        min-height: auto;
+        align-items: stretch;
+        row-gap: 20px;
+        padding-bottom: 64px;
+    }
+}
+
+.content {
+    color: $color-white;
+
+    @media (max-width:768px) {
+        order: 1;
+    }
+}
+
+.button {
+    border: $color-gray-light 1px solid;
+
+    @media (max-width:576px) {
+        height: 40px;
+        aspect-ratio: 1;
+        font-size: 0;
+        border-width: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.button-back {
+    @media (max-width:576px) {
+        background-image: url('../../assets/images/back_icon.svg');
+    }
+}
+
+.button-logout {
+    @media (max-width:576px) {
+        background-image: url('../../assets/images/logout_icon.svg');
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.loader-container {}

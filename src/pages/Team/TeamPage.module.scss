@@ -1,0 +1,54 @@
+@use 'src/shared/styles/utils' as *;
+
+.tittle-h1 {
+    font-size: 64px;
+    line-height: 75px;
+
+    @media (max-width:768px) {
+        font-size: 36px;
+        line-height: 42px;
+    }
+}
+
+.tittle-h2 {
+    color: $color-gray-light;
+    font-size: 20px;
+    line-height: 23px;
+
+    @media (max-width:768px) {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.header-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    align-items: center;
+}
+
+.users-list {
+    padding-top: 48px;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main {
+    max-width: $max-content-width;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: auto;
+}
+
+.button-more-block {
+    padding-block: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

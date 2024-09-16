@@ -1,0 +1,39 @@
+@use 'src/shared/styles/utils' as *;
+
+.button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    padding: 8px 16px 8px 16px;
+    border-radius: 8px;
+    border-width: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.primary {
+    color: $color-white;
+    background-color: $color-primary;
+
+    &:hover {
+        filter: grayscale(20%);
+    }
+}
+
+.transparent {
+    background-color: transparent;
+    color: $color-black;
+    border: $color-black 1px solid;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+}
+
+.link {
+    background-color: transparent;
+    border: none;
+}

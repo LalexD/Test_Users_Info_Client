@@ -1,0 +1,40 @@
+@use 'src/shared/styles/utils' as *;
+
+.likeButton {
+    width: 30px;
+    height: 28px;
+    background-color: $color-gray-light;
+    border: 0px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        .icon {
+            path {
+                stroke: $color-primary;
+                stroke-width: 1px;
+            }
+        }
+    }
+}
+
+.icon {
+    fill: $color-gray-light;
+
+    path {
+        stroke: $color-black;
+    }
+}
+
+.isActive {
+    .icon {
+        fill: $color-primary;
+
+        path {
+            stroke: $color-primary;
+            stroke-width: 0px;
+        }
+    }
+}

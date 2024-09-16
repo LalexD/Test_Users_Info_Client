@@ -1,0 +1,120 @@
+@use 'src/shared/styles/utils' as *;
+
+.headerContent {
+    color: $color-white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+
+    @media (max-width:768px) {
+        flex-direction: column-reverse;
+        text-align: center;
+        row-gap: 20px;
+    }
+}
+
+.headerTittles {
+    display: flex;
+    flex-direction: column;
+}
+
+.tittle-name {
+    font-size: 64px;
+    line-height: 75px;
+    min-height: 42px;
+
+    @media (max-width:768px) {
+        font-size: 36px;
+        line-height: 42px;
+    }
+}
+
+.tittle-post {
+    font-size: 32px;
+    line-height: 38px;
+    min-height: 38px;
+
+    @media (max-width:768px) {
+        font-size: 20px;
+        line-height: 23px;
+    }
+}
+
+.avatar {
+    width: 187px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    color: $color-gray;
+    line-height: 181px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.main {
+    padding-top: 20px;
+    max-width: $max-content-width;
+    width: 100%;
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-between;
+    margin-inline: auto;
+
+    padding-inline: 122px 122px;
+
+    @media (max-width:1024px) {
+        padding-inline: 30px;
+    }
+
+    @media (max-width:768px) {
+        flex-direction: column-reverse;
+        row-gap: 20px;
+    }
+
+    @media (max-width:576px) {
+        padding-inline: 16px;
+    }
+}
+
+.info {
+    white-space: pre-line;
+    max-width: 640px;
+    width: 100%;
+}
+
+.info-text {
+    animation: $animation-opacity-fadeIn;
+}
+
+.additionalContainer {}
+
+ul.additionalInfoList {
+    list-style: none;
+
+    li+li {
+        margin-top: 24px;
+    }
+
+    li {
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+        font-size: 16px;
+        line-height: 22px;
+
+        a {
+            flex-shrink: 0;
+            display: flex;
+            width: 24px;
+            aspect-ratio: 1;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                margin: auto;
+            }
+        }
+    }
+
+}

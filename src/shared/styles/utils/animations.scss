@@ -1,0 +1,64 @@
+@use './variables.scss' as *;
+
+$animation-base-duration: 300ms;
+$animation-left-bounce: $animation-base-duration keyframe-left-bounce ease-out;
+$animation-error-outline-blink: $animation-base-duration keyframe-error-outline-blink ease-out;
+$animation-opacity-fadeIn: $animation-base-duration keyframe-fadeIn ease-out;
+$animation-spinner-rotate: spin-anim 1.2s linear infinite;
+
+@keyframes keyframe-left-bounce {
+    from {
+        left: 30px;
+    }
+
+    30% {
+        left: 0px;
+    }
+
+    60% {
+        left: 5px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+
+@keyframes keyframe-error-outline-blink {
+    from {
+        outline-color: rgba($color-red, 0)
+    }
+
+    30% {
+        outline-color: rgba($color-red, 0.8)
+    }
+
+    60% {
+        outline-color: rgba($color-red, 0.5)
+    }
+
+    to {
+        outline-color: rgba($color-red, 1)
+    }
+}
+
+@keyframes keyframe-fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
