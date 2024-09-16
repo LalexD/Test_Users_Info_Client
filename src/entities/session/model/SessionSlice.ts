@@ -20,7 +20,6 @@ export const register = createAsyncThunk(
   "session/register",
   async ({ email, password }: { email: string, password: string }, thunkAPI) => {
     const data = await AuthAPI.register({ email, password });
-    console.log(data);
     const { token } = data;
     if (token) {
       LocalStorage.setToken(token);
